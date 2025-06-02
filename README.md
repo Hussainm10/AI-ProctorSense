@@ -13,8 +13,6 @@ In today's digitally transforming educational sector, ensuring fairness and disc
 
 Team Behind ProctorSense
 
-
-
 **Team Lead & Developer**   | Hussain Mansoor Bhutto    
 **Co-Lead & Graphics Designer** | Muhammad Moosa Khan        
 **Junior Developers**     | Mahnoor Noman, Muneera Quaid & Karishma Kumari          
@@ -30,11 +28,50 @@ Tools & Technologies
 **Streamlit** (GUI support)
 **D-library** and **MediaPipe** for facial landmarks detection
 
-How to Run ProctorSense (Step-by-Step Guide)
+**How to Set Up and Run ProctorSense**
+Follow these steps to successfully run ProctorSense, our AI-powered motion detection and inspection tool.
 
-Follow the steps below to run the project successfully on your local machine:
+Requirements
+Make sure your system has the following:
+Python 3.7 or higher
+pip (Python package installer)
+A webcam (for real-time video detection)
 
-### 🔧 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/proctorsense.git
+**1.Clone the Repository**
+git clone https://github.com/yourusername/proctorsense.git
 cd proctorsense
+
+**2.Create and Activate a Virtual Environment (Optional but Recommended)**
+python -m venv venv
+# Windows
+venv\Scripts\activate
+
+**3.Install Required Packages**
+Use the following command to install all dependencies:
+pip install -r requirements.txt
+NOTE : If dlib fails to install using pip, use the .whl file method below.
+
+Install dlib Using a .whl File (For Windows Users)
+Download the compatible .whl file for your Python version from this site:
+
+**https://www.lfd.uci.edu/~gohlke/pythonlibs/#dlib*
+pip install dlib‑19.24.0‑cp38‑cp38‑win_amd64.whl
+
+**4.Download the Dlib Facial Landmark Model File**
+ProctorSense uses a pre-trained model for facial landmark detection.
+www.dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+
+After downloading:
+Extract the .bz2 file
+Place the shape_predictor_68_face_landmarks.dat file into the project directory (same folder as the main script)
+
+**5.Run the ProctorSense Tool**
+Once everything is set up, simply run the main script in terminal :
+python proctorsense.py
+
+
+
+
+
+
+
